@@ -4,10 +4,14 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.gemfire.mapping.annotation.Indexed;
 import org.springframework.data.gemfire.mapping.annotation.Region;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 @Region(name = "Authors")
 public class Author {
     
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String firstName;
