@@ -74,10 +74,10 @@ class Stater implements ApplicationListener<ApplicationReadyEvent> {
         }
 
         Collection<Double> averages = this.invoker.average();
-        Double clusterAvergage = averages
+        Double clusterAverage = averages
                 .stream()
                 .collect(Collectors.averagingDouble(x -> x));
 
-        System.out.println("cluster average: " + clusterAvergage);
+        System.out.println("cluster average: " + clusterAverage);
     }
 }
